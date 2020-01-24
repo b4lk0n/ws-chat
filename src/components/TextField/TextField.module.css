@@ -1,0 +1,73 @@
+.root {
+  display: inline-block;
+  height: 40px;
+  border: 1px solid var(--divider);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.root:focus-within {
+  border-color: var(--textSecondary);
+}
+
+.root > input {
+  padding: 10px 16px;
+  border: none;
+  outline: none;
+  min-width: 200px;
+  height: 100%;
+  color: var(--textPrimary);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+  letter-spacing: 0.25px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.root.withIcon > input {
+  padding-left: 40px;
+}
+
+.root.withClear > input {
+  padding-right: 34px;
+}
+
+.root > input::placeholder,
+.icon,
+.clearButton {
+  color: var(--textSecondary);
+}
+
+.root.disabled {
+  pointer-events: none;
+}
+
+.root.disabled > input {
+  color: var(--textSecondary);
+}
+
+.root.disabled > input::placeholder,
+.root.disabled > .icon,
+.root.disabled > .clearButton {
+  color: var(--divider);
+}
+
+.icon,
+.clearButton {
+  position: absolute;
+}
+
+.icon {
+  top: 8px;
+  left: 8px;
+}
+
+.clearButton {
+  top: 11px;
+  right: 8px;
+}
