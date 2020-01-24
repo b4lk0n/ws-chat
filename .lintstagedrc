@@ -1,6 +1,5 @@
 {
   "{src,public}/**/*.{js,css,html}": [
-    "prettier --write",
-    "git add"
+    "prettier --write"
   ]
 }
