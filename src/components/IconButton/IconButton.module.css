@@ -1,0 +1,39 @@
+.root {
+  --size: 32px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--size);
+  height: var(--size);
+  user-select: none;
+  border: none;
+  border-radius: 4px;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  color: var(--primary);
+}
+
+.small {
+  --size: 18px;
+}
+
+.large {
+  --size: 40px;
+}
+
+.root:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.root:not(:disabled):not(.small):hover,
+.root:not(:disabled):not(.small):focus {
+  background-color: var(--outlineLight);
+}
+
+.root:not(:disabled):not(.small):active {
+  background-color: var(--outline);
+}

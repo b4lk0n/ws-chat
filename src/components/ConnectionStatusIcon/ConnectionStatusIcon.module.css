@@ -1,0 +1,18 @@
+.root {
+  --color: var(--surface);
+
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--outline);
+  border-radius: 50%;
+  background-color: var(--color);
+}
+
+.success {
+  --color: var(--success);
+}
+
+.failure {
+  --color: var(--error);
+}

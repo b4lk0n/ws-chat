@@ -1,0 +1,19 @@
+.root {
+  --size: 24px;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--size);
+  line-height: 1;
+  width: 1em;
+  height: 1em;
+}
+
+.small {
+  --size: 18px;
+}
+
+.large {
+  --size: 36px;
+}

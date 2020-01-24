@@ -1,0 +1,18 @@
+:root {
+  --background: #fff;
+  --surface: #f5f6f8;
+
+  --primary: #5c9cf5;
+
+  --textPrimary: #26344a;
+  --textSecondary: rgba(38, 52, 74, 0.5);
+
+  --divider: #edeff2;
+
+  --outlineLight: rgba(4, 15, 26, 0.06);
+  --outline: rgba(4, 15, 26, 0.12);
+  --outlineDark: rgba(4, 15, 26, 0.26);
+
+  --success: #50a14f;
+  --error: #cc3727;
+}
