@@ -1,4 +1,5 @@
 import React from 'react';
+import { bool, string } from 'prop-types';
 import { isBoolean } from 'lodash-es';
 import cx from 'classnames';
 
@@ -16,3 +17,7 @@ export const ConnectionStatusIcon = ({ success, className }) => (
     )}
   />
 );
+ConnectionStatusIcon.propTypes = {
+  success: bool,
+  className: string,
+};

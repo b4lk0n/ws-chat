@@ -1,4 +1,5 @@
 import React from 'react';
+import { node, oneOf, oneOfType, string } from 'prop-types';
 import { isString } from 'lodash-es';
 import cx from 'classnames';
 
@@ -19,4 +20,9 @@ export const Icon = ({ value, size, className }) => {
       {value}
     </span>
   );
+};
+Icon.propTypes = {
+  value: oneOfType([string, node]).isRequired,
+  size: oneOf(['small', 'large']),
+  className: string,
 };
