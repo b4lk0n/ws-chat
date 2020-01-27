@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ConnectionStatusIcon /> should add additional classes if provided 1`] = `
+<span
+  class="root animated"
+/>
+`;
+
+exports[`<ConnectionStatusIcon /> should not add any additional classes by default 1`] = `
+<span
+  class="root"
+/>
+`;
+
+exports[`<ConnectionStatusIcon /> should render success={false} status icon 1`] = `
+<span
+  class="root failure"
+/>
+`;
+
+exports[`<ConnectionStatusIcon /> should render success={true} status icon 1`] = `
+<span
+  class="root success"
+/>
+`;
