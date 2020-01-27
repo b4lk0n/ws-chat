@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> should add additional class if provided 1`] = `
+<span
+  class="root undefined centered"
+>
+  Hello
+</span>
+`;
+
+exports[`<Text /> should render caption text 1`] = `
+<span
+  class="root caption"
+>
+  Hello
+</span>
+`;
+
+exports[`<Text /> should render subtitle text 1`] = `
+<span
+  class="root subtitle"
+>
+  Hello
+</span>
+`;
+
+exports[`<Text /> should render the text 1`] = `
+<span
+  class="root undefined"
+>
+  Hello
+</span>
+`;
+
+exports[`<Text /> should render title text 1`] = `
+<span
+  class="root title"
+>
+  Hello
+</span>
+`;
