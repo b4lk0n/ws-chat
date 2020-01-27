@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> should add additional class if provided 1`] = `
+<div
+  class="root title"
+>
+  <input />
+</div>
+`;
+
+exports[`<TextField /> should not render clear button for empty input 1`] = `
+<div
+  class="root withClear"
+>
+  <input />
+</div>
+`;
+
+exports[`<TextField /> should render clear button for input with value 1`] = `
+<div
+  class="root withClear"
+>
+  <input
+    value="Text"
+  />
+  <button
+    class="root small clearButton"
+  >
+    <span
+      class="root small material-icons"
+    >
+      cancel
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<TextField /> should render disabled elements 1`] = `
+<div
+  class="root withClear disabled"
+>
+  <input
+    disabled=""
+    value="Text"
+  />
+  <button
+    class="root small clearButton"
+  >
+    <span
+      class="root small material-icons"
+    >
+      cancel
+    </span>
+  </button>
+</div>
+`;
+
+exports[`<TextField /> should render icon 1`] = `
+<div
+  class="root withIcon"
+>
+  <input />
+  <span
+    class="root undefined material-icons icon"
+  >
+    search
+  </span>
+</div>
+`;
+
+exports[`<TextField /> should render only input by default 1`] = `
+<div
+  class="root"
+>
+  <input
+    placeholder="Text"
+  />
+</div>
+`;
