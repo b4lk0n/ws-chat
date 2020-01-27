@@ -1,0 +1,26 @@
+.root {
+  display: inline-block;
+  position: relative;
+}
+
+.menu {
+  position: absolute;
+  width: min-content;
+  opacity: 0;
+  visibility: hidden;
+  background-color: var(--surface);
+  border: 1px solid var(--divider);
+  border-radius: 4px;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12), 0px 3px 5px rgba(0, 0, 0, 0.2);
+  transition: opacity 0.1s ease-in-out, visibility 0.1s ease-in-out;
+}
+
+.menuOpen .menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menuItem {
+  border-radius: 0;
+  width: 100%;
+}

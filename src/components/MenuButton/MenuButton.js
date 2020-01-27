@@ -1,0 +1,56 @@
+import React, { useState, useCallback } from 'react';
+import cx from 'classnames';
+import { string, array, func, any } from 'prop-types';
+import { Button } from '../Button';
+import styles from './MenuButton.module.css';
+
+export const MenuButton = ({ label, items, onChange, value, getItemLabel, getItemKey, className, ...props }) => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMenu = useCallback(() => setMenuOpen(!menuOpen), [menuOpen]);
+  const closeMenu = useCallback(() => setMenuOpen(false), []);
+  const handleItemClick = useCallback(
+    item => () => {
+      closeMenu();
+      onChange(item);
+    },
+    [onChange]
+  );
+
+  return (
+    <div
+      className={cx(
+        styles.root,
+        {
+          [styles.menuOpen]: menuOpen,
+        },
+        className
+      )}
+    >
+      <Button {...props} label={value ? getItemLabel(value) : label} onClick={toggleMenu} />
+
+      <div className={styles.menu}>
+        {items.map(item => (
+          <Button
+            key={getItemKey(item)}
+            label={getItemLabel(item)}
+            onClick={handleItemClick(item)}
+            className={styles.menuItem}
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+MenuButton.propTypes = {
+  label: string.isRequired,
+  items: array.isRequired,
+  onChange: func.isRequired,
+  value: any,
+  getItemLabel: func,
+  getItemKey: func,
+  className: string,
+};
+MenuButton.defaultProps = {
+  getItemLabel: item => item.name,
+  getItemKey: item => item.id,
+};

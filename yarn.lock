@@ -1422,11 +1422,6 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@reach/auto-id@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/auto-id/-/auto-id-0.7.3.tgz#4456640b223452c2e5cc527c4c74cb98d4dc45ca"
-  integrity sha512-5TUE7x7/WYgUaQZ3rrAfpo9L2PeuF45SEXfezQztUZZ0Pao/MuyLlPxUG8NgnibobjsE9l/JpB1Tp06narz3ug==
-
 "@reach/dialog@^0.7.3":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@reach/dialog/-/dialog-0.7.3.tgz#a42ee1b74d61a09e1e61c5d00adae1a19045a0ee"
@@ -1438,44 +1433,10 @@
     react-focus-lock "^2.2.1"
     react-remove-scroll "^2.2.0"
 
-"@reach/menu-button@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/menu-button/-/menu-button-0.7.3.tgz#9e3ac0ce59b1ff81624518199b739265aca9a79f"
-  integrity sha512-/Th8xQkYOP4rgbbDcOU4x4VsIrIOtx36G3qXCZ1kaJvchTDvf5mQQVTGCiEDt2Knw0aqsAi3lKmJ8/klpg7A3Q==
-  dependencies:
-    "@reach/auto-id" "^0.7.3"
-    "@reach/popover" "^0.7.3"
-    "@reach/utils" "^0.7.3"
-    prop-types "^15.7.2"
-    warning "^4.0.3"
-
-"@reach/observe-rect@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@reach/observe-rect/-/observe-rect-1.0.5.tgz#28bf3c5c35da7fef72cd124af4ac32308d0c3f15"
-  integrity sha512-EQLHhquzwAh2TFtMJU0PXJRmhpOrAhzApgoI4Lwn72J7ygrMk3Ys3a3i8KDnV0TetbwAxn4XSHi4pE8sPWUYLg==
-
-"@reach/popover@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/popover/-/popover-0.7.3.tgz#a5281b54ff216613cec543101a83f60035f344c8"
-  integrity sha512-6kdssDSJfr4Yfpg6yfT4f7HRX79niawFu6BIcpDTFm4/V9pe3GzUIRyaPo97/zl/2RlX6DMeO4tHv9DYVNPZIw==
-  dependencies:
-    "@reach/portal" "^0.7.3"
-    "@reach/rect" "^0.7.3"
-    "@reach/utils" "^0.7.3"
-    tabbable "^4.0.0"
-
 "@reach/portal@^0.7.3":
   version "0.7.3"
   resolved "https://registry.yarnpkg.com/@reach/portal/-/portal-0.7.3.tgz#6120abf36207bab702d7528e784c9c0e60459903"
   integrity sha512-kpXoCgY4dku1fy9JdqSX/u+fbvqx5YX420wdEmBY8mnguEtbCEI9uanVMUdfN9dnKO7ZvSqs33edYVYYCVKa9A==
-
-"@reach/rect@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/rect/-/rect-0.7.3.tgz#bb1e52629d0895c9a6131d39219e3dbce3a47d54"
-  integrity sha512-e4hiJP/SP+ShLqu6sFyHwTQeE7hrFHC1B68muflPnepYMHx3PM+4306mhShi4gtKelzSmKx/FZHMyX7CRMA5Ag==
-  dependencies:
-    "@reach/observe-rect" "^1.0.5"
-    prop-types "^15.7.2"
 
 "@reach/router@^1.2.1":
   version "1.2.1"
@@ -1487,16 +1448,6 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
     warning "^3.0.0"
-
-"@reach/tabs@^0.7.3":
-  version "0.7.3"
-  resolved "https://registry.yarnpkg.com/@reach/tabs/-/tabs-0.7.3.tgz#b2edb5f215c9434dcd87fce420f91c44ba5962b2"
-  integrity sha512-5GyW7SnjASM9wS4KvfElt1v4WxqLttGM+jEt4LPWz+eg/4kolpF3x0g3UNo+lvC1TXtC/ein2ZZ24p/e7sPo0w==
-  dependencies:
-    "@reach/auto-id" "^0.7.3"
-    "@reach/utils" "^0.7.3"
-    prop-types "^15.7.2"
-    warning "^4.0.3"
 
 "@reach/utils@^0.7.3":
   version "0.7.3"
@@ -12809,11 +12760,6 @@ symbol.prototype.description@^1.0.0:
   dependencies:
     es-abstract "^1.17.0-next.1"
     has-symbols "^1.0.1"
-
-tabbable@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-4.0.0.tgz#5bff1d1135df1482cf0f0206434f15eadbeb9261"
-  integrity sha512-H1XoH1URcBOa/rZZWxLxHCtOdVUEev+9vo5YdYhC9tCY4wnybX+VQrCYuy9ubkg69fCBxCONJOSLGfw0DWMffQ==
 
 table@^5.2.3:
   version "5.4.6"
