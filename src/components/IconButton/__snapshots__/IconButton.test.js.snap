@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IconButton /> should add additional class if provided 1`] = `
+<button
+  class="root undefined bordered"
+>
+  <span
+    class="root undefined material-icons"
+  >
+    account
+  </span>
+</button>
+`;
+
+exports[`<IconButton /> should not fire events if disabled 1`] = `
+<button
+  class="root undefined"
+  disabled=""
+>
+  <span
+    class="root undefined material-icons"
+  >
+    account
+  </span>
+</button>
+`;
+
+exports[`<IconButton /> should render custom icon 1`] = `
+<button
+  class="root undefined"
+>
+  <span
+    class="root undefined"
+  >
+    <span>
+      custom
+    </span>
+  </span>
+</button>
+`;
+
+exports[`<IconButton /> should render large icon button 1`] = `
+<button
+  class="root large"
+>
+  <span
+    class="root undefined material-icons"
+  >
+    account
+  </span>
+</button>
+`;
+
+exports[`<IconButton /> should render small icon button 1`] = `
+<button
+  class="root small"
+>
+  <span
+    class="root small material-icons"
+  >
+    account
+  </span>
+</button>
+`;
+
+exports[`<IconButton /> should render string icon 1`] = `
+<button
+  class="root undefined"
+>
+  <span
+    class="root undefined material-icons"
+  >
+    account
+  </span>
+</button>
+`;
