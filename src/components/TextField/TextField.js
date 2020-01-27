@@ -17,10 +17,10 @@ export const TextField = ({ icon, withClear, onChange, className, ...props }) =>
     [onChange]
   );
   const handleClear = useCallback(() => {
-    if (isFunction(onChange)) {
+    if (!props.disabled && isFunction(onChange)) {
       onChange('');
     }
-  }, [onChange]);
+  }, [onChange, props.disabled]);
 
   return (
     <div
@@ -37,7 +37,9 @@ export const TextField = ({ icon, withClear, onChange, className, ...props }) =>
       <input {...props} onChange={handleChange} />
 
       {icon && <Icon value={icon} className={styles.icon} />}
-      {withClear && <IconButton icon={'cancel'} size={'small'} onClick={handleClear} className={styles.clearButton} />}
+      {withClear && props.value && (
+        <IconButton icon={'cancel'} size={'small'} onClick={handleClear} className={styles.clearButton} />
+      )}
     </div>
   );
 };
