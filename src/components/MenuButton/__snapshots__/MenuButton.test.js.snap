@@ -3,33 +3,41 @@
 exports[`MenuButton should render closed by default 1`] = `
 <div
   class="root"
+  data-testid="menu-button"
 >
   <button
     class="root undefined"
+    data-testid="menu-button-anchor"
   >
     <span
       class="root subtitle label"
+      data-testid="text"
     >
       Select
     </span>
   </button>
   <div
     class="menu"
+    data-testid="menu-button-list"
   >
     <button
       class="root undefined menuItem"
+      data-testid="menu-item"
     >
       <span
         class="root subtitle label"
+        data-testid="text"
       >
         Text
       </span>
     </button>
     <button
       class="root undefined menuItem"
+      data-testid="menu-item"
     >
       <span
         class="root subtitle label"
+        data-testid="text"
       >
         JSON
       </span>

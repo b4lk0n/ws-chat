@@ -3,6 +3,7 @@
 exports[`<Text /> should add additional class if provided 1`] = `
 <span
   class="root undefined centered"
+  data-testid="text"
 >
   Hello
 </span>
@@ -11,6 +12,7 @@ exports[`<Text /> should add additional class if provided 1`] = `
 exports[`<Text /> should render caption text 1`] = `
 <span
   class="root caption"
+  data-testid="text"
 >
   Hello
 </span>
@@ -19,6 +21,7 @@ exports[`<Text /> should render caption text 1`] = `
 exports[`<Text /> should render subtitle text 1`] = `
 <span
   class="root subtitle"
+  data-testid="text"
 >
   Hello
 </span>
@@ -27,6 +30,7 @@ exports[`<Text /> should render subtitle text 1`] = `
 exports[`<Text /> should render the text 1`] = `
 <span
   class="root undefined"
+  data-testid="text"
 >
   Hello
 </span>
@@ -35,6 +39,7 @@ exports[`<Text /> should render the text 1`] = `
 exports[`<Text /> should render title text 1`] = `
 <span
   class="root title"
+  data-testid="text"
 >
   Hello
 </span>

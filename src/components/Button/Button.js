@@ -6,7 +6,7 @@ import { Text } from '../Text';
 import styles from './Button.module.css';
 
 export const Button = ({ label, variant, className, ...props }) => (
-  <button {...props} className={cx(styles.root, styles[variant], className)}>
+  <button data-testid={'button'} {...props} className={cx(styles.root, styles[variant], className)}>
     <Text variant={'subtitle'} className={styles.label}>
       {label}
     </Text>

@@ -9,26 +9,29 @@ const items = [
 
 describe('MenuButton', () => {
   it('should render closed by default', () => {
-    const { container } = render(
+    const { getByTestId } = render(
       <MenuButton items={items} label={'Select'} onChange={jest.fn()} getItemKey={item => item.type} />
     );
 
-    expect(container.firstChild).toBeInTheDocument();
-    expect(container.firstChild).not.toHaveClass('menuOpen');
-    expect(container).toHaveTextContent('Select');
-    expect(container.firstChild).toMatchSnapshot();
+    const menuButton = getByTestId('menu-button');
+    expect(menuButton).toBeInTheDocument();
+    expect(menuButton).not.toHaveClass('menuOpen');
+    expect(menuButton).toHaveTextContent('Select');
+    expect(menuButton).toMatchSnapshot();
   });
 
   it('should open menu by clicking on a button', () => {
-    const { container } = render(
+    const { getByTestId } = render(
       <MenuButton items={items} label={'Select'} onChange={jest.fn()} getItemKey={item => item.type} />
     );
 
-    expect(container.firstChild).not.toHaveClass('menuOpen');
-    fireEvent.click(container.firstChild.firstChild);
-    expect(container.firstChild).toHaveClass('menuOpen');
+    const menuButton = getByTestId('menu-button');
+
+    expect(menuButton).not.toHaveClass('menuOpen');
+    fireEvent.click(getByTestId('menu-button-anchor'));
+    expect(menuButton).toHaveClass('menuOpen');
     fireEvent.click(document);
-    expect(container.firstChild).not.toHaveClass('menuOpen');
+    expect(menuButton).not.toHaveClass('menuOpen');
   });
 
   it('should select an item by clicking on it', () => {

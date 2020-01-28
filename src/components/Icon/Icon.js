@@ -5,9 +5,11 @@ import cx from 'classnames';
 
 import styles from './Icon.module.css';
 
-export const Icon = ({ value, size, className }) => {
+export const Icon = ({ value, size, className, ...props }) => {
   return (
     <span
+      data-testid={'icon'}
+      {...props}
       className={cx(
         styles.root,
         styles[size],

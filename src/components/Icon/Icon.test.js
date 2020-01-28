@@ -7,7 +7,7 @@ const CustomIcon = () => <span />;
 describe('<Icon />', () => {
   it('should render children', () => {
     const { container } = render(<Icon value={'account'} />);
-    expect(getNodeText(container.firstChild)).toBe('account');
+    expect(container).toHaveTextContent('account');
   });
 
   it('should not add additional classes by default', () => {
@@ -16,22 +16,25 @@ describe('<Icon />', () => {
   });
 
   it('should add additional classes if provided', () => {
-    const { container } = render(<Icon value={'account'} className={'colored'} />);
-    expect(container.firstChild).toHaveClass('colored');
-    expect(container.firstChild).toMatchSnapshot();
+    const { getByTestId } = render(<Icon value={'account'} className={'colored'} />);
+    const icon = getByTestId('icon');
+    expect(icon).toHaveClass('colored');
+    expect(icon).toMatchSnapshot();
   });
 
   it('should not add material-icons class for custom icon elements', () => {
-    const { container } = render(<Icon value={<CustomIcon />} />);
-    expect(container.firstChild).not.toHaveClass('material-icons');
-    expect(container.firstChild).toMatchSnapshot();
+    const { getByTestId } = render(<Icon value={<CustomIcon />} />);
+    const icon = getByTestId('icon');
+    expect(icon).not.toHaveClass('material-icons');
+    expect(icon).toMatchSnapshot();
   });
 
   ['small', 'large'].forEach(size => {
     it(`should render ${size} icon`, () => {
-      const { container } = render(<Icon value={'account'} size={size} />);
-      expect(container.firstChild).toHaveClass(size);
-      expect(container.firstChild).toMatchSnapshot();
+      const { getByTestId } = render(<Icon value={'account'} size={size} />);
+      const icon = getByTestId('icon');
+      expect(icon).toHaveClass(size);
+      expect(icon).toMatchSnapshot();
     });
   });
 });

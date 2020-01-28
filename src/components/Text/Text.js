@@ -5,7 +5,9 @@ import cx from 'classnames';
 import styles from './Text.module.css';
 
 export const Text = ({ variant, className, children }) => (
-  <span className={cx(styles.root, styles[variant], className)}>{children}</span>
+  <span className={cx(styles.root, styles[variant], className)} data-testid={'text'}>
+    {children}
+  </span>
 );
 Text.propTypes = {
   variant: oneOf(['title', 'subtitle', 'caption']),

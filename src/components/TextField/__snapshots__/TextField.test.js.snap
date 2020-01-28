@@ -3,31 +3,41 @@
 exports[`<TextField /> should add additional class if provided 1`] = `
 <div
   class="root title"
+  data-testid="textfield"
 >
-  <input />
+  <input
+    data-testid="textfield-input"
+  />
 </div>
 `;
 
 exports[`<TextField /> should not render clear button for empty input 1`] = `
 <div
   class="root withClear"
+  data-testid="textfield"
 >
-  <input />
+  <input
+    data-testid="textfield-input"
+  />
 </div>
 `;
 
 exports[`<TextField /> should render clear button for input with value 1`] = `
 <div
   class="root withClear"
+  data-testid="textfield"
 >
   <input
+    data-testid="textfield-input"
     value="Text"
   />
   <button
     class="root small clearButton"
+    data-testid="icon-button"
   >
     <span
       class="root small material-icons"
+      data-testid="icon"
     >
       cancel
     </span>
@@ -38,16 +48,20 @@ exports[`<TextField /> should render clear button for input with value 1`] = `
 exports[`<TextField /> should render disabled elements 1`] = `
 <div
   class="root withClear disabled"
+  data-testid="textfield"
 >
   <input
+    data-testid="textfield-input"
     disabled=""
     value="Text"
   />
   <button
     class="root small clearButton"
+    data-testid="icon-button"
   >
     <span
       class="root small material-icons"
+      data-testid="icon"
     >
       cancel
     </span>
@@ -58,10 +72,14 @@ exports[`<TextField /> should render disabled elements 1`] = `
 exports[`<TextField /> should render icon 1`] = `
 <div
   class="root withIcon"
+  data-testid="textfield"
 >
-  <input />
+  <input
+    data-testid="textfield-input"
+  />
   <span
     class="root undefined material-icons icon"
+    data-testid="icon"
   >
     search
   </span>
@@ -71,8 +89,10 @@ exports[`<TextField /> should render icon 1`] = `
 exports[`<TextField /> should render only input by default 1`] = `
 <div
   class="root"
+  data-testid="textfield"
 >
   <input
+    data-testid="textfield-input"
     placeholder="Text"
   />
 </div>

@@ -3,6 +3,7 @@
 exports[`<Icon /> should add additional classes if provided 1`] = `
 <span
   class="root undefined material-icons colored"
+  data-testid="icon"
 >
   account
 </span>
@@ -11,6 +12,7 @@ exports[`<Icon /> should add additional classes if provided 1`] = `
 exports[`<Icon /> should not add additional classes by default 1`] = `
 <span
   class="root undefined material-icons"
+  data-testid="icon"
 >
   account
 </span>
@@ -19,6 +21,7 @@ exports[`<Icon /> should not add additional classes by default 1`] = `
 exports[`<Icon /> should not add material-icons class for custom icon elements 1`] = `
 <span
   class="root undefined"
+  data-testid="icon"
 >
   <span />
 </span>
@@ -27,6 +30,7 @@ exports[`<Icon /> should not add material-icons class for custom icon elements 1
 exports[`<Icon /> should render large icon 1`] = `
 <span
   class="root large material-icons"
+  data-testid="icon"
 >
   account
 </span>
@@ -35,6 +39,7 @@ exports[`<Icon /> should render large icon 1`] = `
 exports[`<Icon /> should render small icon 1`] = `
 <span
   class="root small material-icons"
+  data-testid="icon"
 >
   account
 </span>

@@ -33,8 +33,9 @@ export const TextField = ({ icon, withClear, onChange, className, ...props }) =>
         },
         className
       )}
+      data-testid={'textfield'}
     >
-      <input {...props} onChange={handleChange} />
+      <input {...props} onChange={handleChange} data-testid={'textfield-input'} />
 
       {icon && <Icon value={icon} className={styles.icon} />}
       {withClear && props.value && (

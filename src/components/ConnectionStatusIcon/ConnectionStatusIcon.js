@@ -5,8 +5,10 @@ import cx from 'classnames';
 
 import styles from './ConnectionStatusIcon.module.css';
 
-export const ConnectionStatusIcon = ({ success, className }) => (
+export const ConnectionStatusIcon = ({ success, className, ...props }) => (
   <span
+    data-testid={'connection-status-icon'}
+    {...props}
     className={cx(
       styles.root,
       {

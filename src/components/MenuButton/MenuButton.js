@@ -32,16 +32,23 @@ export const MenuButton = ({ label, items, onChange, value, getItemLabel, getIte
         },
         className
       )}
+      data-testid={'menu-button'}
     >
-      <Button {...props} label={value ? getItemLabel(value) : label} onClick={toggleMenu} />
+      <Button
+        {...props}
+        label={value ? getItemLabel(value) : label}
+        onClick={toggleMenu}
+        data-testid={'menu-button-anchor'}
+      />
 
-      <div className={styles.menu}>
+      <div className={styles.menu} data-testid={'menu-button-list'}>
         {items.map(item => (
           <Button
             key={getItemKey(item)}
             label={getItemLabel(item)}
             onClick={handleItemClick(item)}
             className={styles.menuItem}
+            data-testid={'menu-item'}
           />
         ))}
       </div>
