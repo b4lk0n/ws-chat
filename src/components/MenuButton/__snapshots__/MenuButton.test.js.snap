@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MenuButton should render closed by default 1`] = `
+<div
+  class="root"
+>
+  <button
+    class="root undefined"
+  >
+    <span
+      class="root subtitle label"
+    >
+      Select
+    </span>
+  </button>
+  <div
+    class="menu"
+  >
+    <button
+      class="root undefined menuItem"
+    >
+      <span
+        class="root subtitle label"
+      >
+        Text
+      </span>
+    </button>
+    <button
+      class="root undefined menuItem"
+    >
+      <span
+        class="root subtitle label"
+      >
+        JSON
+      </span>
+    </button>
+  </div>
+</div>
+`;

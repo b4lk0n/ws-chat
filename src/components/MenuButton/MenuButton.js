@@ -1,7 +1,8 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef } from 'react';
 import cx from 'classnames';
 import { string, array, func, any } from 'prop-types';
 import { Button } from '../Button';
+import { useOnClickOutside, useOnKeyDown } from '../../hooks';
 import styles from './MenuButton.module.css';
 
 export const MenuButton = ({ label, items, onChange, value, getItemLabel, getItemKey, className, ...props }) => {
@@ -16,8 +17,14 @@ export const MenuButton = ({ label, items, onChange, value, getItemLabel, getIte
     [onChange]
   );
 
+  const containerRef = useRef();
+
+  useOnClickOutside(containerRef, closeMenu);
+  useOnKeyDown('Escape', closeMenu);
+
   return (
     <div
+      ref={containerRef}
       className={cx(
         styles.root,
         {

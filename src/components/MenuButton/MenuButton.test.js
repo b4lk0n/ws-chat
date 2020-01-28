@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, fireEvent } from '@testing-library/react';
 import { MenuButton } from './MenuButton';
 
 const items = [
@@ -9,6 +9,52 @@ const items = [
 
 describe('MenuButton', () => {
   it('should render closed by default', () => {
-    // const { container } = render(<MenuButton items={items} />);
+    const { container } = render(
+      <MenuButton items={items} label={'Select'} onChange={jest.fn()} getItemKey={item => item.type} />
+    );
+
+    expect(container.firstChild).toBeInTheDocument();
+    expect(container.firstChild).not.toHaveClass('menuOpen');
+    expect(container).toHaveTextContent('Select');
+    expect(container.firstChild).toMatchSnapshot();
+  });
+
+  it('should open menu by clicking on a button', () => {
+    const { container } = render(
+      <MenuButton items={items} label={'Select'} onChange={jest.fn()} getItemKey={item => item.type} />
+    );
+
+    expect(container.firstChild).not.toHaveClass('menuOpen');
+    fireEvent.click(container.firstChild.firstChild);
+    expect(container.firstChild).toHaveClass('menuOpen');
+    fireEvent.click(document);
+    expect(container.firstChild).not.toHaveClass('menuOpen');
+  });
+
+  it('should select an item by clicking on it', () => {
+    const changeHandler = jest.fn();
+
+    const { container } = render(
+      <MenuButton items={items} label={'Select'} onChange={changeHandler} getItemKey={item => item.type} />
+    );
+    expect(container.firstChild.firstChild).toHaveTextContent('Select');
+    fireEvent.click(container.firstChild.firstChild);
+    expect(container.firstChild).toHaveClass('menuOpen');
+    fireEvent.click(container.querySelector('.menuItem'));
+    expect(changeHandler).toBeCalledTimes(1);
+    expect(changeHandler).toBeCalledWith(items[0]);
+    expect(container.firstChild).not.toHaveClass('menuOpen');
+  });
+
+  it('should close menu by Escape', () => {
+    const { container } = render(
+      <MenuButton items={items} label={'Select'} onChange={jest.fn()} getItemKey={item => item.type} />
+    );
+
+    expect(container.firstChild).not.toHaveClass('menuOpen');
+    fireEvent.click(container.firstChild.firstChild);
+    expect(container.firstChild).toHaveClass('menuOpen');
+    fireEvent.keyDown(document, { key: 'Escape' });
+    expect(container.firstChild).not.toHaveClass('menuOpen');
   });
 });
