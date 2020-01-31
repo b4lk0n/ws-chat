@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should add additional class if provided 1`] = `
+<button
+  class="root undefined bordered"
+  data-testid="button"
+>
+  <span
+    class="root subtitle label"
+    data-testid="text"
+  >
+    click me
+  </span>
+</button>
+`;
+
+exports[`<Button /> should not fire events if disabled 1`] = `
+<button
+  class="root undefined"
+  data-testid="button"
+  disabled=""
+>
+  <span
+    class="root subtitle label"
+    data-testid="text"
+  >
+    click me
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render outlined button 1`] = `
+<button
+  class="root outlined"
+  data-testid="button"
+>
+  <span
+    class="root subtitle label"
+    data-testid="text"
+  >
+    click me
+  </span>
+</button>
+`;
+
+exports[`<Button /> should render primary button 1`] = `
+<button
+  class="root primary"
+  data-testid="button"
+>
+  <span
+    class="root subtitle label"
+    data-testid="text"
+  >
+    click me
+  </span>
+</button>
+`;
+
+exports[`<Button /> should renders correctly 1`] = `
+<button
+  class="root undefined"
+  data-testid="button"
+>
+  <span
+    class="root subtitle label"
+    data-testid="text"
+  >
+    click me
+  </span>
+</button>
+`;
