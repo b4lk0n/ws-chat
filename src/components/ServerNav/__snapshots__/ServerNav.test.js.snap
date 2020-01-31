@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServerNav /> should renders correctly 1`] = `
+<div
+  class="root"
+  data-testid="server-nav"
+>
+  <div
+    class="header"
+  >
+    <div
+      class="root withIcon withClear searchField"
+      data-testid="textfield"
+    >
+      <input
+        data-testid="textfield-input"
+        placeholder="Search"
+        value=""
+      />
+      <span
+        class="root undefined material-icons icon"
+        data-testid="icon"
+      >
+        search
+      </span>
+      
+    </div>
+    <button
+      class="root large"
+      data-testid="server-nav-create-button"
+    >
+      <span
+        class="root undefined material-icons"
+        data-testid="icon"
+      >
+        add_circle_outline
+      </span>
+    </button>
+  </div>
+  <div
+    class="serversList"
+  >
+    <div
+      class="root clickable serverItem"
+      data-testid="server-nav-item"
+    >
+      <div
+        class="info"
+      >
+        <span
+          class="root undefined serverUrl"
+          data-testid="text"
+        >
+          wss://server1.com
+        </span>
+        <span
+          class="root caption updatedAt"
+          data-testid="text"
+        >
+          31 Jan 2020, 14:57
+        </span>
+      </div>
+      <div
+        class="connectionStatus"
+      >
+        <span
+          class="root undefined"
+          data-testid="icon"
+        >
+          <span
+            class="root"
+            data-testid="connection-status-icon"
+          />
+        </span>
+      </div>
+    </div>
+    <div
+      class="root clickable serverItem"
+      data-testid="server-nav-item"
+    >
+      <div
+        class="info"
+      >
+        <span
+          class="root undefined serverUrl"
+          data-testid="text"
+        >
+          wss://server2.com
+        </span>
+        <span
+          class="root caption updatedAt"
+          data-testid="text"
+        >
+          31 Jan 2020, 14:57
+        </span>
+      </div>
+      <div
+        class="connectionStatus"
+      >
+        <span
+          class="root undefined"
+          data-testid="icon"
+        >
+          <span
+            class="root success"
+            data-testid="connection-status-icon"
+          />
+        </span>
+      </div>
+    </div>
+    <div
+      class="root clickable serverItem"
+      data-testid="server-nav-item"
+    >
+      <div
+        class="info"
+      >
+        <span
+          class="root undefined serverUrl"
+          data-testid="text"
+        >
+          wss://server3.com
+        </span>
+        <span
+          class="root caption updatedAt"
+          data-testid="text"
+        >
+          31 Jan 2020, 14:58
+        </span>
+      </div>
+      <div
+        class="connectionStatus"
+      >
+        <span
+          class="root undefined"
+          data-testid="icon"
+        >
+          <span
+            class="root failure"
+            data-testid="connection-status-icon"
+          />
+        </span>
+      </div>
+    </div>
+    <div
+      class="root clickable serverItem"
+      data-testid="server-nav-item"
+    >
+      <div
+        class="info"
+      >
+        <span
+          class="root undefined serverUrl"
+          data-testid="text"
+        >
+          wss://server4.com
+        </span>
+      </div>
+      <div
+        class="connectionStatus"
+      >
+        <span
+          class="root undefined"
+          data-testid="icon"
+        >
+          <span
+            class="root"
+            data-testid="connection-status-icon"
+          />
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

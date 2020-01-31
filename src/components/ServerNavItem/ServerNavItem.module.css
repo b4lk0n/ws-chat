@@ -1,7 +1,8 @@
 .root {
   display: flex;
   align-items: center;
-  padding: 14px 8px 14px 16px;
+  height: 64px;
+  padding: 14px 12px 14px 16px;
 }
 
 .clickable {
