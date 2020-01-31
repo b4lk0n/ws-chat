@@ -7,7 +7,7 @@ const items = [
   { type: 'application/json', name: 'JSON' },
 ];
 
-describe('MenuButton', () => {
+describe('<MenuButton />', () => {
   it('should render closed by default', () => {
     const { getByTestId } = render(
       <MenuButton items={items} label={'Select'} onChange={jest.fn()} getItemKey={item => item.type} />

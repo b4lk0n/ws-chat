@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`MenuButton should render closed by default 1`] = `
+exports[`<MenuButton /> should render closed by default 1`] = `
 <div
   class="root"
   data-testid="menu-button"
