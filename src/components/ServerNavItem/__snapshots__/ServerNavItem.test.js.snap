@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ServerNavItem /> should renders correctly 1`] = `
+<div
+  class="root"
+  data-testid="server-nav-item"
+>
+  <div
+    class="info"
+  >
+    <span
+      class="root undefined serverUrl"
+      data-testid="text"
+    >
+      wss://echo.websocket.org
+    </span>
+    <span
+      class="root caption updatedAt"
+      data-testid="text"
+    >
+      31 Jan 2020, 13:18
+    </span>
+  </div>
+  <div
+    class="connectionStatus"
+  >
+    <span
+      class="root undefined"
+      data-testid="icon"
+    >
+      <span
+        class="root"
+        data-testid="connection-status-icon"
+      />
+    </span>
+  </div>
+</div>
+`;

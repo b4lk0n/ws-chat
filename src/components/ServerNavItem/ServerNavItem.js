@@ -1,19 +1,56 @@
-import React from 'react';
-import { string, instanceOf, bool } from 'prop-types';
+import React, { useCallback } from 'react';
+import { string, instanceOf, bool, func, shape } from 'prop-types';
+import cx from 'classnames';
 import { format } from 'date-fns';
 import { Text } from '../Text';
 import { ConnectionStatusIcon } from '../ConnectionStatusIcon';
 import { Icon } from '../Icon';
 
 import styles from './ServerNavItem.module.css';
+import { isFunction } from 'lodash-es';
 
-export const ServerNavItem = ({ url, updatedAt, connectionStatus }) => {
+export const ServerNavItem = ({ server, onClick, className, ...props }) => {
+  const handleClick = useCallback(() => {
+    if (isFunction(onClick)) {
+      onClick(server);
+    }
+  }, [server, onClick]);
+
   return (
-    <div className={styles.root}>
-      <Text>{url}</Text>
-      {updatedAt ? <Text>{format(updatedAt, 'd LLL uuuu, HH:mm')}</Text> : null}
+    <div
+      {...props}
+      data-testid={'server-nav-item'}
+      className={cx(
+        styles.root,
+        {
+          [styles.clickable]: isFunction(onClick),
+        },
+        className
+      )}
+      onClick={handleClick}
+    >
+      <div className={styles.info}>
+        <Text className={styles.serverUrl}>{server.url}</Text>
 
-      <Icon value={<ConnectionStatusIcon success={connectionStatus} />} />
+        {server.updatedAt ? (
+          <Text variant={'caption'} className={styles.updatedAt}>
+            {format(server.updatedAt, 'd LLL uuuu, HH:mm')}
+          </Text>
+        ) : null}
+      </div>
+
+      <div className={styles.connectionStatus}>
+        <Icon value={<ConnectionStatusIcon success={server.connectionStatus} />} />
+      </div>
     </div>
   );
+};
+ServerNavItem.propTypes = {
+  server: shape({
+    url: string.isRequired,
+    updatedAt: instanceOf(Date),
+    connectionStatus: bool,
+  }).isRequired,
+  onClick: func,
+  className: string,
 };

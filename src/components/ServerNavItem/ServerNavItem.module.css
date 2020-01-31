@@ -1,2 +1,25 @@
 .root {
+  display: flex;
+  align-items: center;
+  padding: 14px 8px 14px 16px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.info {
+  flex: 1;
+}
+
+.serverUrl {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 268px;
+}
+
+.updatedAt {
+  color: var(--textSecondary);
 }
