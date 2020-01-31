@@ -46,6 +46,6 @@ export const TextField = ({ icon, withClear, onChange, className, ...props }) =>
 };
 TextField.propTypes = {
   icon: string,
-  withSearch: bool,
+  withClear: bool,
   className: string,
 };
