@@ -7,3 +7,4 @@ export * from './TextField';
 export * from './MenuButton';
 export * from './ServerNavItem';
 export * from './ServerNav';
+export * from './ChatHeader';
