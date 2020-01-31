@@ -1,5 +1,5 @@
 import React from 'react';
-import { withKnobs, text, select, date } from '@storybook/addon-knobs';
+import { withKnobs, text, select } from '@storybook/addon-knobs';
 import { action } from '@storybook/addon-actions';
 import { ServerNavItem } from '../components';
 
@@ -13,7 +13,7 @@ export const Default = () => (
     <ServerNavItem
       server={{
         url: text('url', 'wss://echo.websocket.org'),
-        updatedAt: date('updatedAt', new Date()),
+        updatedAt: new Date(1580473734102),
         connectionStatus: select('connectionStatus', {
           '—': undefined,
           success: true,

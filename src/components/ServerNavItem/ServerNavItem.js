@@ -18,8 +18,8 @@ export const ServerNavItem = ({ server, onClick, className, ...props }) => {
 
   return (
     <div
-      {...props}
       data-testid={'server-nav-item'}
+      {...props}
       className={cx(
         styles.root,
         {
