@@ -8,7 +8,7 @@ import styles from './ChatHeader.module.css';
 export const ChatHeader = ({ url, connectionStatus, actions, className, ...props }) => {
   return (
     <div data-testid={'chat-header'} {...props} className={styles.root}>
-      <Text variant={'Title'} className={styles.serverUrl} data-testid={'chat-header-title'}>
+      <Text variant={'title'} className={styles.serverUrl} data-testid={'chat-header-title'}>
         {url}
       </Text>
 

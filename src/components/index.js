@@ -8,3 +8,4 @@ export * from './MenuButton';
 export * from './ServerNavItem';
 export * from './ServerNav';
 export * from './ChatHeader';
+export * from './Message';

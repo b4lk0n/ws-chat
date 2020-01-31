@@ -8,13 +8,19 @@ export default {
   decorators: [withKnobs],
 };
 
-export const Default = () => (
-  <ChatHeader
-    url={text('url', 'wss://echo.websocket.org')}
-    actions={select('connectionStatus', {
-      '—': undefined,
-      success: true,
-      failure: false,
-    })}
-  />
-);
+export const Default = () => {
+  const isConnected = select('connectionStatus', {
+    '—': undefined,
+    success: true,
+    failure: false,
+  });
+
+  return (
+    <ChatHeader
+      url={text('url', 'wss://echo.websocket.org')}
+      actions={
+        <Button variant={'outlined'} label={isConnected ? 'Disconnect' : 'Connect'} onClick={action('onClick')} />
+      }
+    />
+  );
+};

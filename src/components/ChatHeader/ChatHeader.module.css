@@ -1,2 +1,14 @@
 .root {
+  height: 56px;
+  padding: 0 12px 0 24px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--divider);
+}
+
+.serverUrl {
+  flex: 1;
+  word-wrap: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

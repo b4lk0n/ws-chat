@@ -10,8 +10,12 @@ html {
   box-sizing: inherit;
 }
 
-body {
+body,
+pre {
   margin: 0;
+}
+
+body {
   min-height: 100vh;
   background-color: var(--background);
   color: var(--textPrimary);
